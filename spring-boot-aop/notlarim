@@ -1,0 +1,5 @@
+Aspect oriented programming (aop)
+
+=> classlari paketleri modulleri davranislarina gore ayirmadir
+=> veritabani baglanma siniflari bir yerde yardimci siniflar bir yerde vs
+=> mesela bir service paketinde bir metot cagrilirken bir kullanici erisim kontrolu yapabiliriz, yani kodda araya girebiliriz

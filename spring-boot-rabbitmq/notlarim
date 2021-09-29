@@ -1,0 +1,40 @@
+- RabbitMQ bir kuyruk sunucusudur
+
+=> Bir mesaj bir yerlere yazilir, mesaj yazilan sira ile tuketilir.
+=> Kuyruk sunucusuna client olmak vardir. Iki turlu client vardir kuyruga veri yazan veya kuyruktan veri alan(procuder, consumer)
+=> RabbitMQ de cesitli iletisim tipleri vardir;
+    Direct => bu iletisim tipinda kuyruga yazilan veri mutlaka bir kisi tarafindan tuketilir
+    Fanout => bir mesaj kuyruga yazildiktan sonra o mesaj tum consumer lara gider (orn tum kullanicilara bildirim gitmesi)
+    Topic => mesajlari yonetebiliyoruz mesela bazi mesajlar direct bazilari fanout seklinde davransin
+
+iletisim tiplerinde procuder sayisinda limit yok
+
+projeyi olustururken spring assistant i secebiliriz, bu startsprinio nun aynisi
+
+
+version: '3.1'
+services:
+  spboot-rabbitmq:
+    image: rabbitmq:3-management
+    ports:
+      - '15672:15672'
+      - '5672:5672'
+    environment:
+      - RABBITMQ_DEFAULT_USER=ibrahim
+      - RABBITMQ_DEFAULT_PASS=ibrahim
+=>burada portlar bizim image icerisinden dis dunyaya actigimiz portlar
+=>image in bazi ozelliklerini kullanabilmek icin bu portlari yazmamiz gerekiyor
+=>siteden environment lar icin bilgiler bulabilirsin
+=>spboot-rabbitmq ismini biz verdik
+=>rabbitmq:3-management bize yonetim ui da sunar
+
+docker-compose -f docker-compose.yml up -d
+ile bu compose dosyasini calistirdik
+
+kurulduktan sonra localhost:15672 ile arayuze erisebilirsin
+
+start spring io da
+- Spring for RabbitMQ
+ile olusturdugumuz projenin pom dosyasini aldik
+
+simdi kodlamaya gecelim

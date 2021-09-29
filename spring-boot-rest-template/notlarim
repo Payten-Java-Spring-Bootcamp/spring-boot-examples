@@ -1,0 +1,6 @@
+client dan server a nasıl istek atacagız
+bu işlemi spring boot da bulunan rest template ile yapacağız
+bu projede backend olarak postgresql projesini kullanacağız
+o projeyi 8080 de çalıştıracağız bu projeyi de 8081 de
+
+postgresql projesini çalıştırmak için öncelikle onun docker compose file ını çalıştırmalısın

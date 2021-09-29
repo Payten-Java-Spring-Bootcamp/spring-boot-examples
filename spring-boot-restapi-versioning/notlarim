@@ -1,0 +1,6 @@
+projeyi çok fazla kişi geliştiriyorsa bu düzeyde versiyonlama yapılabilir
+
+- bunun için kullanılan yöntemlerden biri url üzerinden versiyonlamadır
+
+- burada kullandıgımız yontemlerden farklı olarak api gateway leri kullanabiliriz
+- bunlar orta katmanda çalışır

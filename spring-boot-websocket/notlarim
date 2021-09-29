@@ -1,0 +1,14 @@
+Web Socket nedir?
+
+- Web Socket tcp uzerinden cift yonlu haberlesme saglayan bir teknolojidir.
+    -> request channel
+    -> response channel
+- Request channel uzerinden bir api ye mesaj gonderilebilir
+- broker channel mesajin nasil gonderilecegine vs karar verir. Ornegin sadece 2. istemciye mesaj gonder. Yani aslinda mesaj dagitan yapidir
+- buradan mesaj response channel a gelir ve istemciye dagitilir
+
+Jackson teknolojisi nedir?
+
+- jackson ise json u serialization veya deserialization yapmamiza yarayan bir teknolojidir
+
+Stomp bir mesajlasma protokoludur.

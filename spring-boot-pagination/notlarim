@@ -1,0 +1,22 @@
+h2 veri tabaninda sayfalama yapmaya calisacagiz
+
+spring.h2.console.enabled=true
+h2 den web arayuzu gormek icin bunu yaptik
+
+sayfalama ne demek?
+-> veri tabanindan gelen verileri istedigimiz duzende sayfalamak demek ornegin bir sayfada 4 kayit olsun vs
+simdi bizim 6 kaydimiz var 6 sini da istersek 1 sayfamiz olur
+eger 6 kayittan 3 kayit istersek 2 sayfamiz olur
+
+h2 veri tabani ise spring boot icerisinde gomulu bir veri tabanidir
+
+localhost:8080/book?pageSize=5&page=0
+bu sekilde istek atabiliriz
+
+localhost:8080/h2-console bu bilgi ile veri tabani consoluna girebiliriz
+bu bilgi uygulamayi calistirdigimizda cikan yazilarda yaziyor
+ayrica kullanici adi ve sifre de orada yaziyor
+istersen sifre vs verebilirsin
+
+
+Slice yontemi mesela facebook da asagi inerken yukelniyor ancak biz asagida kayit var mi bilmiyoruz, bu da bir slice sayfalamadir

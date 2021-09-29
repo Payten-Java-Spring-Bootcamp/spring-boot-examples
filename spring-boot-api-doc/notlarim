@@ -1,0 +1,23 @@
+swagger
+
+aslinda swagger bir api dokumanidir
+
+projemize swagger i nasil implemente edecegiz
+maven ile bunu halledebiliriz
+https://springfox.github.io/springfox/docs/current/#maven
+buradan
+<dependency>
+        <groupId>io.springfox</groupId>
+        <artifactId>springfox-swagger2</artifactId>
+        <version>2.9.2</version>
+</dependency>
+bu bagimliligi aliyoruz
+
+aslinda annotation lari kullanarak bir api yi tanimliyoruz
+projeyi calistirdiktan sonra appi documantosyon adresini bize gosteriyor
+v2/api/docs tarzinda
+
+bunu chrome da gordugumuzda cikan yaziyi swagger editor e yapistirirsak her seyi yerli yerinde gorebiliriz
+
+springfox swagger ui ile de bu dokuman icin ui uretebiliriz
+ui adresi internette var aslinda bizimadres/swagger-ui.html

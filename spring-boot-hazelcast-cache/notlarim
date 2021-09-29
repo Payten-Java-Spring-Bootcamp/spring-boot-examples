@@ -1,0 +1,8 @@
+Hazelcast açık kaynak kodlu Java tabanlı veri kümeleme, dağıtımı için yapılmış bir yapıdır.
+Hazelcast verileri anlık olarak hafızada tutuyor.
+VM’ler sayesinde verileri eşit şekilde balans etmeye çalışarak veri yükünü düzgün şekide paylaştırıp, hızlı güvenli ve en az veri kaybı için çalışan bir yapıdır Hazelcast.
+JVM’leriniz ve sunucular arasında bu veri yükünün dağılımını belirleyebiliyoruz.  Hazelcast farklı instance’ler arasında haberleşebilir ve diğer instance’lere erişebilirsiniz.
+
+Cache den gelen veriler çok hızlı şekilde gelir
+
+save işlemi olduğunda cache bozulur, bu yüzden yeniden get işlemi olması lazım

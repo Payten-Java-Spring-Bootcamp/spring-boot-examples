@@ -1,0 +1,21 @@
+oncelikle proje olusturmak icin start spring io yu kullandik
+burada sectiklerimiz
+- PostgreSQL Driver
+- Spring Data JPA
+- Lombok
+- Spring Web
+Buradan gelen pom dosyasini aldik ve icinden parent ve dependcy kismini buraya yapistirdik
+artifact id olarak localde kini sectik
+kalanina pom dosyasindan bak
+
+
+Simdi ise docker compose dosyasi olusturduk ve icine postgre sql koyacagiz
+docker-compose -f docker-compose.yml up -d
+bu sekilde gene calistirdik
+
+(docker ps -qa)
+tum docker image larini durdurur
+
+
+spring.jpa.hibernate.ddl-auto=update
+otomatik veri tabani olusturmadigi icin bunu koyduk

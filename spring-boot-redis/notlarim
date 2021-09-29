@@ -1,0 +1,26 @@
+Redis ne amacla kullanilabilir
+
+-Cache olarak kullanilabilir, bir veri tabanina cache olarak kullanabiliriz. Maaliyetli bir sorgu cache de saklanabilir yani redis uzerinde. Asil kaynak uzun surede cevap verebilir. Yani veritabani. Bu sureyi biz cache ile azaltabiliyoruz. Normal bir metodu da redis cache ile yonetebiliriz
+
+-Session Storage olarak kullanilabilir. Oturum yonetebiliriz. Redis Cache
+
+-Pub/Sub; bir metodun yaptigi isi diger metotlarada haber vermek icin kullanilir. Twitter da birini takip ettim diyelim. Bundan o kullanicinin haberide oluyor.
+
+-QUEUE olarak kullanilabilir. pub/sub mantigiyla aynidir. Queue da mesaji sadece bir kisi alir.
+
+-Atomic Counter olarak kullanilir.
+
+
+Docker kurulumu
+docker run -p 6379:6379 --name redisserver -d redis
+bu sekilde ayaga kaldiriyoruz portu disari acmayi unutma!
+
+redis key value seklinde olan bir nosql veri tabanidir
+
+FastoRedis uygulamasini indirdik
+Burada database imize baglandik ve kayitlarimizi ekledik
+
+Bu projede biz redis cache kullanacagiz
+yani bir iliskisel veri tabani kullanirken araya bir redis cache koyacagiz
+
+gerekli bagimliliklari kurduk

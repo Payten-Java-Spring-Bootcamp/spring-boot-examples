@@ -1,0 +1,54 @@
+- proje olustururken
+start.spring.io dan proje olsuturuyoruz
+  -lombok
+  -spring web
+  -elasticsearch
+ile olusturdugumuz projenin pom dosyasindaki bagimliliklari buraya ekledik
+Burada parent i bagimliliklari ve java versiyonunu degistirip build kismini ekledik
+
+
+Simdi bir docker-compose.yml file olusturduk
+- docker elastic search e girdik
+docker compose icine;
+version: '3.1'
+services:
+  elasticsearch:
+    image: elasticsearch:7.13.2
+    ports:
+      - '9200:9200'
+      - '9300:9300'
+    environment:
+        - discovery.type=single-node
+bunu yapistirdik
+peki biz bu bilgileri nerden aldik
+docker elastic search sitesinde docker run diye bir kisim var
+docker run -d --name elasticsearch --net somenetwork -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" elasticsearch:tag
+burada tum bilgiler verilmis, ornegin portlar verilmis e(environment) verilmis
+tag name elastic search olarak verilmis
+burada image:elasticsearch:7.13.2 versiyon bilgisidir, boyle bir versiyon oldugunu ben docker elastic search sitesinden  ogrendim
+
+
+-simdi ise bu dosyayi calistiracagiz
+docker-compose -f spring-elastic-search/src/main/resources/docker-compose.yml bu sekilde calistiriyoruz up -d
+-f dosyadan calistir demek
+up ayaga kaldir demek
+-d arka planda yap demek
+
+tum bu islemleri yapmadan docker desktop calisiyor olmali
+
+-bu image in ayakta oldugunu gormek icin docker ps yazmalisin
+-elastic search u localhost:9200 da test edebilirsin
+
+artik siniflari olusturup kodlamaya baslayalim
+
+
+application.properties dosyasi default degerlerde tutulur
+local den canliya ciktiginda burada default bazi degerleri degistirebilirsin
+
+
+
+
+
+
+
+

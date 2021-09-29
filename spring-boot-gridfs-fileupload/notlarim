@@ -1,0 +1,7 @@
+GridFs file upload icin kullanilir.
+Mongodb kullanacagiz
+
+Uygulamayi test etmek icin postman kullan
+body kisminda form-data kismindan file secebilirsin
+key olarak filename ver value olarak file sec
+robo3t den veri tabanini gorebilirsin

@@ -1,0 +1,27 @@
+postgresql veri tabani ile calisacagiz
+
+flyway ne ise yarar
+- cok buyuk projelerde veri tabanlarini versiyonlayabiliriz
+- uygulama baslamadan once veri tabanina uygulanmamis bir migration var ise (degisiklik scripti) bu scripti veri tabanina uygular
+- veri tabaninda bir tablo tutuyor, bu tabloda migration lar tutulur ve hangisi uygulandi veya uygulanmadi gorebiliriz
+- yapilan guncellemyi geri de alabiliriz
+
+
+spring.jpa.hibernate.ddl-auto=validate veri tabani semasini flyway olustursan jpa olusturmasin
+
+
+
+resources altinda
+- V1__db_init.sql diye bir dosya olusturduk
+- bu bir versiyon dosyasidir
+- isimlendirme kurali vardir
+- V1 versiyonu temsil eder
+- ardindan ise iki cizgi ve yapilan islemin ismi gelir
+- uzanti sql dir
+
+- Geri alinmasi istedigimiz migration lar U1__ ile yazilir
+- R__ migration lar ise surekli tekrarlanan yapidadir, her calistiginda calissin anlamindadir
+- isimlendirme cok onemli
+
+
+- oncelikle veri tabanimizi init ediyoruz

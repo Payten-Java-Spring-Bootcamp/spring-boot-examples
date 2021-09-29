@@ -1,0 +1,25 @@
+Log lar onem derecelerine gore seviyelere ayrilir
+
+Severe
+warning
+info
+config
+fine
+finer
+finest
+
+
+spring de bunlar su sekilde geciyor
+
+Error: Hatalar
+Warn: Uyari
+Info : bilgi verme amacli sisteme etkisi yok, uygulama state i ogreniriz
+Debug: Debug modu cok fazla log uretir, cok detayli surec bilgisi verir
+Trace: uygulamanin state i hakkinda bilgi toplamak icin kullanilir
+
+
+Handler lar loglari dusurdugumuz yer
+
+Console Handler
+File Handler
+

@@ -1,0 +1,23 @@
+=> oncelikle docker mongo sitesinden docker yml bulup burada resources altina bu yml dosyasini koyduk
+=> docker-compose -f Documents/web/fullStackWeb/java/springYoutube/spring-mongo-restapi/src/main/resources/docker-compose.yml up -d
+=> bu komut ile bu yml dosyasini ayaga kaldirdik
+=> burada docker ps yazip ardindan bu image a docker stop image-number yazarsak bu imaje silinir
+=> docker ps ile port numarasini vs gorebiliriz
+=> docker stop $(docker ps -qa) tum docker imagelarini durdurur
+
+=> robo mongo programindan yml dosyasinda belirttigimiz porta baglanirsak artik database aktif hale gelir
+=> icindeki data artik hic kaybolmuyor
+=> arayuzde calistigindan artik emin olduk
+
+=> Gelistirmesine nasil baslayacagiz
+=> start.spring.io sitesine gittik
+=> burada proje olustururken bagimliliklara mongo yazdik
+=> burda spring data mongodb kullanacagiz ve spring web kullanacagiz
+=> bu haliyle projeyi indiriyoruz
+=> burada inen projeden yalnizca pom.xml i alacagiz parent takindan itibaren project e kadar icini kopyaliyoruz
+=> modul altindaki pom/xml icerisine yapistiiriyoruz, ancak icerdeki parent tagini siliyorujz
+=> ayrica yeni ekledigimizdeki articatID yi de siliyoruz
+=> groupid olarak da proje group id yi yaziyoruz
+
+
+=>Ardindan src>main>java icerisinde paketlerimizi ve siniflarimizi olusturmaya basladik

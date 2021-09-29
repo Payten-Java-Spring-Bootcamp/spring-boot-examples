@@ -1,0 +1,31 @@
+JWT 3 parcadan olusur
+
+Header-Payload-Signature
+
+-> signature kismi sunucuyu ilgilendirir
+
+-> biz bu token i sunucudan aliriz
+
+-> Header de token i olsutururken kullanilan sifreleme algoritmasi bulunur
+
+-> payload icerisinde istedigimz data ve iat dedigimiz token ne zaman olsuturuldu bilgisini veren tarih alani bulunur
+
+-> jwt tek yonlu bir sifreleme algoritmasi ile sifrenelenir
+
+-> yani tekrardan kullanamiyoruz
+
+-> signature icerisinde bir sifre var bu sifre bilinmeden ayni token olusturulamiyor
+
+-> token a gecerlilik suresi veriyoruz
+
+-> istegin dogru client tarafindan gelip gelmedigini anlamak icin kullanilir
+
+-> token baskasi tarafindan kullanilabilir
+
+-> bunun icin https kullanabilirsin
+
+
+
+
+Uygulama Notlari
+-> uygulamayi ilk calistirdigimizda jwt bize default login olusturdu

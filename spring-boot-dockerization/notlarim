@@ -1,0 +1,68 @@
+Simdi burada yapacagimiz sey spring boot projesini docker image i haline getirmek
+
+- Oncelikle basit bir proje olusturduk
+
+- Peki nasil docker image haline getiricez
+
+- 2 yontem var
+    1- docker file ile
+    2- maven plugin ile yaratmak
+
+- Docker file yontemi
+    Entrypoint ; nasil calistiracagiz onun komutu
+    ENV ; environment veriable
+    add ; yuklemek istedigimiz paketler
+    maintaniner ; kim gelistirdi
+    from ; hangi base image kullanarak baslatacagiz
+    run ; baslatma
+    user ; user olustursun mu id si ne olsun
+    volume ; harici disk alani verilsin mi
+
+-plugin yontemi
+     <plugin>
+                    <groupId>io.fabric8</groupId>
+                    <artifactId>docker-maven-plugin</artifactId>
+                    <version>0.26.0</version>
+                    <extensions>true</extensions>
+                    <configuration>
+                        <verbose>true</verbose>
+                        <images>
+                            <image>
+                                <name>${project.artifactId}</name>
+                                <build>
+                                    <from>java:8-jdk-alpine</from>
+                                    <entryPoint>
+                                        <exec>
+                                            <args>java</args>
+                                            <args>-jar</args>
+                                            <args>/maven/${project.artifactId}-${project.version}.jar</args>
+                                        </exec>
+                                    </entryPoint>
+                                    <assembly>
+                                        <descriptorRef>artifact</descriptorRef>
+                                    </assembly>
+                                </build>
+                            </image>
+                        </images>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <id>build</id>
+                            <phase>post-integration-test</phase>
+                            <goals>
+                                <goal>build</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+
+- bu plugin i pom dosyasi icerisinde built altindaki plugins lere ekliyoruz
+- plugin eklendikten sonra sagdan maven icerisine giriyoruz oradan m harfine tiklayip mvn clean install diyip execute ediyoruz
+- bundan sonra docker images ile image lerimizi gorebiliriz
+- docker run imageName ile uygulamayi baslatabilirsin
+- docker run -p 8080:8080 imageName bu sekilde baslatirsan artik uygulamayi 8080 de gorebilirsin
+- uygulama normalde 8080 de calisiyor ama bizim localimizde calismasi icin onun 8080 portunu bizim 8080 e aktariyoruz istersen baska porta da aktarabilirsin
+- docker ps ile de calisan image lari gorursun
+- docker push ile artik uygulamani docker a pushlayabilirsin
+
+

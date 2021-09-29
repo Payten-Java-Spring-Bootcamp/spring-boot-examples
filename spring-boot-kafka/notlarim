@@ -1,0 +1,9 @@
+Kafka bir kuyruk sunucusudur
+apachi teknolojisidir
+Mesajlarimizi kuyruga ekleyip kuyruktan cekebiliriz
+consumer producer mantigi vardir
+
+zookeeper kafka instance larini senkronize eder
+
+9092 kafka portu
+2181 zookeeper portu

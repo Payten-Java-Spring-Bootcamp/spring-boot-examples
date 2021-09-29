@@ -1,0 +1,42 @@
+GrapQl Api nedir?
+
+Genellikle mobile da kullanilir
+Biz bir data isterken gonderdigimiz sorguda hangi datayi istedigimizi secebiliriz
+Tum datalarin bize gelmesi yerine sadece ihtiyac duydugumuz data gelir
+Bu sayede hizdan ve zamandan kazanmis oluruz
+
+pom.xml de bağımsız çalışabilmesi için parent güncelliyoruz, modulleri üst projeden ayırmış olduk
+bu projede h2 veritabanı kullandık
+
+graphiql ise graphql in bir arayüzüdür!
+
+http://localhost:8090/graphiql
+ile arayüze erişebiliyoruz
+
+
+graphiql arayüzü üzerinde
+
+mutation{
+  createVehicle(vehicle: {type: "SW", modelCode: "2019", brandName: "vw"}){
+    id
+    launchDate
+  }
+}
+bunu çalıştırırsak bir kayıt oluşturur ve bize kayıdın id sini ve launchdate ini döner, metotda da vehicle dönmesini istemiştik
+
+
+query{
+  getVehicles(type: "test"){
+    id
+  }
+}
+bunu çalıştırırsak bize kayıt getirir type ı test olan kaydı
+
+
+graphql i uygulamalarımızın client tarafında kullanabiliriz
+graphql hiçbir veritabanına bağlı değildir
+mobile da çok kullanılır
+
+
+vehicle.graphqls de type olanlar sunucudan döner
+input olanlar ise sadece sunucunun kabul ettiği nesneler

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="spring-boot-hazelcast-cache" />
+        <module name="spring-boot-dockerization" />
+        <module name="spring-boot-flyway" />
+        <module name="spring-boot-restapi-versioning" />
+        <module name="spring-boot-redis" />
+        <module name="spring-boot-logging" />
+        <module name="spring-elastic-search" />
+        <module name="spring-boot-kafka" />
+        <module name="spring-datajpa-postgresql" />
+        <module name="spring-boot-rest-template" />
+        <module name="spring-boot-events" />
+        <module name="spring-mong-restapi" />
+        <module name="spring-boot-exception-handling" />
+        <module name="spring-mongo-restapi" />
+        <module name="spring-boot-rabbitmq" />
+        <module name="spring-boot-pagination" />
+        <module name="spring-boot-aop" />
+        <module name="spring-boot-gridfs-fileupload" />
+        <module name="spring-boot-websocket" />
+        <module name="spring-boot-jwt" />
+        <module name="spring-security-facebook-login" />
+        <module name="spring-boot-api-doc" />
+        <module name="spring-boot-graphql" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="spring-boot-webflux-mongo" target="16" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="spring-boot-aop" options="-parameters" />
+      <module name="spring-boot-api-doc" options="-parameters" />
+      <module name="spring-boot-dockerization" options="-parameters" />
+      <module name="spring-boot-events" options="-parameters" />
+      <module name="spring-boot-exception-handling" options="-parameters" />
+      <module name="spring-boot-flyway" options="-parameters" />
+      <module name="spring-boot-graphql" options="-parameters" />
+      <module name="spring-boot-gridfs-fileupload" options="-parameters" />
+      <module name="spring-boot-hazelcast-cache" options="-parameters" />
+      <module name="spring-boot-jwt" options="-parameters" />
+      <module name="spring-boot-kafka" options="-parameters" />
+      <module name="spring-boot-logging" options="-parameters" />
+      <module name="spring-boot-pagination" options="-parameters" />
+      <module name="spring-boot-rabbitmq" options="-parameters" />
+      <module name="spring-boot-redis" options="-parameters" />
+      <module name="spring-boot-rest-template" options="-parameters" />
+      <module name="spring-boot-restapi-versioning" options="-parameters" />
+      <module name="spring-boot-websocket" options="-parameters" />
+      <module name="spring-datajpa-postgresql" options="-parameters" />
+      <module name="spring-elastic-search" options="-parameters" />
+      <module name="spring-mong-restapi" options="-parameters" />
+      <module name="spring-mongo-restapi" options="-parameters" />
+      <module name="spring-security-facebook-login" options="-parameters" />
+    </option>
+  </component>
+</project>
